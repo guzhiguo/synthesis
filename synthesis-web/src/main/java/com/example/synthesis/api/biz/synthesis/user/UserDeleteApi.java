@@ -9,10 +9,12 @@ import com.example.synthesis.user.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
+ * 删除用户
+ *
  * @author: bill
  * @create: 2020/03/23 00:17
  */
-@Api(action = "delete", version = "1.0.0", business = BusinessEnum.SYNTHESIS)
+@Api(action = "deleteUser", version = "1.0.0", business = BusinessEnum.SYNTHESIS)
 public class UserDeleteApi extends AbstractApi<ApiResult<String>, UserDeleteRequest> {
 
     @Autowired

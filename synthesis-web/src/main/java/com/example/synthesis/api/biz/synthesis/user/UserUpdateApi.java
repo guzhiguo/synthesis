@@ -11,10 +11,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
+ * 更新用户
+ *
  * @author: bill
  * @create: 2020/03/23 00:28
  */
-@Api(action = "update", version = "1.0.0", business = BusinessEnum.SYNTHESIS)
+@Api(action = "updateUser", version = "1.0.0", business = BusinessEnum.SYNTHESIS)
 public class UserUpdateApi extends AbstractApi<ApiResult<String>, UserUpdateRequest> {
 
     @Autowired

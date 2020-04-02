@@ -13,13 +13,16 @@ import com.google.common.collect.Maps;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import javax.validation.Valid;
 import java.util.Map;
 
 /**
+ * 用户分页列表
+ *
  * @author: bill
  * @create: 2020/03/22 17:41
  */
-@Api(action = "findPage", version = "1.0.0", business = BusinessEnum.SYNTHESIS)
+@Api(action = "findPageUser", version = "1.0.0", business = BusinessEnum.SYNTHESIS)
 public class UserPageQueryApi extends AbstractApi<ApiResult<PageResult>, UserPageQueryRequest> {
 
     @Autowired
@@ -27,6 +30,7 @@ public class UserPageQueryApi extends AbstractApi<ApiResult<PageResult>, UserPag
 
     @ApiResultAn
     @Override
+    @Valid
     public ApiResult<PageResult> execute(UserPageQueryRequest request) {
 
         PageRequest params = new PageRequest();

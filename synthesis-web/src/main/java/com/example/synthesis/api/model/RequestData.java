@@ -1,5 +1,6 @@
 package com.example.synthesis.api.model;
 
+
 import java.util.Map;
 
 /**
@@ -12,5 +13,5 @@ public class RequestData {
     /**
      * 扩展字段
      */
-    private Map<String,String> extInfo;
+    private Map<String, String> extInfo;
 }

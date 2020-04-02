@@ -1,17 +1,7 @@
 package com.example.synthesis.dao;
 
-import com.example.synthesis.pojo.SysDict;
+import com.example.synthesis.common.BaseMapper;
 
-import java.util.List;
+public interface SysDictMapper extends BaseMapper {
 
-public interface SysDictMapper {
-    int deleteByPrimaryKey(String id);
-
-    int insert(SysDict record);
-
-    SysDict selectByPrimaryKey(String id);
-
-    List<SysDict> selectAll();
-
-    int updateByPrimaryKey(SysDict record);
 }

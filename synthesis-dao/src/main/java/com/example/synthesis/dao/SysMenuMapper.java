@@ -1,17 +1,7 @@
 package com.example.synthesis.dao;
 
-import com.example.synthesis.pojo.SysMenu;
+import com.example.synthesis.common.BaseMapper;
 
-import java.util.List;
+public interface SysMenuMapper extends BaseMapper {
 
-public interface SysMenuMapper {
-    int deleteByPrimaryKey(String id);
-
-    int insert(SysMenu record);
-
-    SysMenu selectByPrimaryKey(String id);
-
-    List<SysMenu> selectAll();
-
-    int updateByPrimaryKey(SysMenu record);
 }
