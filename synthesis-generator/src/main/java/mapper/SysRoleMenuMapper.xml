@@ -41,4 +41,84 @@
     select id, role_id, menu_id, creator, create_time, last_update_by, last_update_time
     from sys_role_menu
   </select>
+  <resultMap id="BaseResultMap" type="com.example.synthesis.pojo.SysRoleMenu">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="menu_id" jdbcType="INTEGER" property="menuId" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from sys_role_menu
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.synthesis.pojo.SysRoleMenu">
+    insert into sys_role_menu (id, role_id, menu_id, 
+      creator, create_time, last_update_by, 
+      last_update_time)
+    values (#{id,jdbcType=VARCHAR}, #{roleId,jdbcType=INTEGER}, #{menuId,jdbcType=INTEGER}, 
+      #{creator,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{lastUpdateBy,jdbcType=VARCHAR}, 
+      #{lastUpdateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.example.synthesis.pojo.SysRoleMenu">
+    update sys_role_menu
+    set role_id = #{roleId,jdbcType=INTEGER},
+      menu_id = #{menuId,jdbcType=INTEGER},
+      creator = #{creator,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, role_id, menu_id, creator, create_time, last_update_by, last_update_time
+    from sys_role_menu
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, role_id, menu_id, creator, create_time, last_update_by, last_update_time
+    from sys_role_menu
+  </select>
+  <resultMap id="BaseResultMap" type="com.example.synthesis.pojo.SysRoleMenu">
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="role_id" jdbcType="INTEGER" property="roleId" />
+    <result column="menu_id" jdbcType="INTEGER" property="menuId" />
+    <result column="creator" jdbcType="VARCHAR" property="creator" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="last_update_by" jdbcType="VARCHAR" property="lastUpdateBy" />
+    <result column="last_update_time" jdbcType="TIMESTAMP" property="lastUpdateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from sys_role_menu
+    where id = #{id,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.synthesis.pojo.SysRoleMenu">
+    insert into sys_role_menu (id, role_id, menu_id, 
+      creator, create_time, last_update_by, 
+      last_update_time)
+    values (#{id,jdbcType=VARCHAR}, #{roleId,jdbcType=INTEGER}, #{menuId,jdbcType=INTEGER}, 
+      #{creator,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{lastUpdateBy,jdbcType=VARCHAR}, 
+      #{lastUpdateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.example.synthesis.pojo.SysRoleMenu">
+    update sys_role_menu
+    set role_id = #{roleId,jdbcType=INTEGER},
+      menu_id = #{menuId,jdbcType=INTEGER},
+      creator = #{creator,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      last_update_by = #{lastUpdateBy,jdbcType=VARCHAR},
+      last_update_time = #{lastUpdateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select id, role_id, menu_id, creator, create_time, last_update_by, last_update_time
+    from sys_role_menu
+    where id = #{id,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select id, role_id, menu_id, creator, create_time, last_update_by, last_update_time
+    from sys_role_menu
+  </select>
 </mapper>
