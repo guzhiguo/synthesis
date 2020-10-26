@@ -10,6 +10,7 @@
         <module>synthesis-service</module>
         <module>synthesis-generator</module>
         <module>synthesis-common</module>
+        <module>synthesis-test</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
