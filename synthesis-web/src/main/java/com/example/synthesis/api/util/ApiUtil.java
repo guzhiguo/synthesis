@@ -54,7 +54,7 @@ public class ApiUtil {
     }
 
     /**
-     * 根据Api的雷鸣获取apiName
+     * 根据Api的类名获取apiName
      *
      * @param apiClazz
      * @return
