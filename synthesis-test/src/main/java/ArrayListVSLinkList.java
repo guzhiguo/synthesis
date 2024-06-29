@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * @author: bill
  * @create: 2020/10/26 22:51
  */
-public class arrayListVSLinkList {
+public class ArrayListVSLinkList {
 
     private static final String DATA="DUMMY DATA";
     private static final int MAX_CAPACITY = 1_000_000;
