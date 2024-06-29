@@ -9,6 +9,7 @@ package Factory;
 public class Test {
 
     public static void main(String[] args) {
+        //子类new父类
         AnimalFactory animalFactory = new BlackCatInstanceFactory();
         Cat cat = animalFactory.createCat();
         cat.eat();
