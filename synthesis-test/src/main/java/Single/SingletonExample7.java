@@ -20,7 +20,7 @@ public class SingletonExample7 {
         INSTANCE;
         private SingletonExample7 singleton;
 
-        //jv保证这个方法绝对只调用一次
+        //jvm保证这个方法绝对只调用一次
         Singleton() {
             singleton = new SingletonExample7();
         }
