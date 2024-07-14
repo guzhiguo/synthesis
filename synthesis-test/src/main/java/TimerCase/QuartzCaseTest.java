@@ -5,6 +5,9 @@ import org.quartz.*;
 import org.quartz.impl.StdSchedulerFactory;
 
 /**
+ * Quartz可以满足更多复杂的调度需求 例如在执行的时间去执行任务调度 当然指定日期实现任务调度也可以是用ScheduledExecutor和Calendar组合实现
+ * Quartz设计的核心类是Scheduler和Job以及Tigger 其中Job负责定义需要执行的任务 Tigger负责设置调度策略 Scheduler负责将二者组装在一起并且触发任务执行
+ *
  * @author: bill
  * @create: 2024/07/14 12:52
  */
