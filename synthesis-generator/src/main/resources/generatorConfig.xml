@@ -48,7 +48,7 @@
                              type="XMLMAPPER"/>
 
         <!--tableName一定要写 否则生成mapper时会生成重复的代码-->
-        <table tableName="${db.username}">
+        <table schema="${db.username}" tableName="%">
             <property name="useActualColumnNames" value="false"/>
         </table>
     </context>
