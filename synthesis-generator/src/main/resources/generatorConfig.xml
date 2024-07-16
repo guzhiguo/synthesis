@@ -28,7 +28,7 @@
                         userId="${db.username}"
                         password="${db.password}">
             <!--防止驱动版本过高导致生成不必要的表文件-->
-            <property name="nullCatalogMeansCurrent" value="true" />
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
         <!--
@@ -47,8 +47,8 @@
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}"
                              type="XMLMAPPER"/>
 
-        <table tableName="%">
-
+        <!--tableName一定要写 否则生成mapper时会生成重复的代码-->
+        <table tableName="${db.username}">
             <property name="useActualColumnNames" value="false"/>
         </table>
     </context>
