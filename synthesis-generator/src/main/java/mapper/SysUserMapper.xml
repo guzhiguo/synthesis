@@ -3,7 +3,7 @@
 <mapper namespace="com.example.synthesis.dao.SysUserMapper">
   <resultMap id="BaseResultMap" type="com.example.synthesis.pojo.SysUser">
     <id column="id" jdbcType="BIGINT" property="id" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="user_id" jdbcType="VARCHAR" property="userId" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -22,14 +22,14 @@
       nick_name, `password`, email, 
       mobile, `status`, gmt_create, 
       gmt_modify)
-    values (#{id,jdbcType=BIGINT}, #{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=BIGINT}, #{userId,jdbcType=VARCHAR}, #{userName,jdbcType=VARCHAR}, 
       #{nickName,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, 
       #{mobile,jdbcType=VARCHAR}, #{status,jdbcType=VARCHAR}, #{gmtCreate,jdbcType=TIMESTAMP}, 
       #{gmtModify,jdbcType=TIMESTAMP})
   </insert>
   <update id="updateByPrimaryKey" parameterType="com.example.synthesis.pojo.SysUser">
     update sys_user
-    set user_id = #{userId,jdbcType=INTEGER},
+    set user_id = #{userId,jdbcType=VARCHAR},
       user_name = #{userName,jdbcType=VARCHAR},
       nick_name = #{nickName,jdbcType=VARCHAR},
       `password` = #{password,jdbcType=VARCHAR},

@@ -21,7 +21,7 @@ public @interface Biz {
     String value();
 
     /**
-     * 版本好
+     * 版本号
      */
     String version();
 

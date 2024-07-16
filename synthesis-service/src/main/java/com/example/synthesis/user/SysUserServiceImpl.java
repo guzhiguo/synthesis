@@ -26,9 +26,9 @@ public class SysUserServiceImpl implements SysUserService {
     @Override
     public String save(SysUser record) {
         HashMap<String, Object> params = ObjectConvert2MapUtils.convertOfObject(record);
-        params.put("id", UUIDUtils.getUUID());
+        params.put("userId", UUIDUtils.getUUID());
         sysUserMapper.insert(params);
-        return String.valueOf(params.get("id"));
+        return String.valueOf(params.get("userId"));
     }
 
     @Override
@@ -54,7 +54,7 @@ public class SysUserServiceImpl implements SysUserService {
 //        params.put("deptId", record.getDeptId());
 //        params.put("lastUpdateBy", record.getLastUpdateBy());
         sysUserMapper.updateByPrimaryKey(params);
-        return record.getId();
+        return record.getUserId();
     }
 
     @Override

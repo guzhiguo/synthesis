@@ -5,7 +5,7 @@ import java.util.Date;
 public class SysUser {
     private Long id;
 
-    private Integer userId;
+    private String userId;
 
     private String userName;
 
@@ -31,11 +31,11 @@ public class SysUser {
         this.id = id;
     }
 
-    public Integer getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(Integer userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

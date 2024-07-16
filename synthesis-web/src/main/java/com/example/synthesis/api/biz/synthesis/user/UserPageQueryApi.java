@@ -35,8 +35,8 @@ public class UserPageQueryApi extends AbstractApi<ApiResult<PageResult>, UserPag
 
         PageRequest params = new PageRequest();
         Map<String, Object> map = Maps.newHashMap();
-        if (StringUtils.isNotBlank(request.getId())) {
-            map.put("id", request.getId());
+        if (StringUtils.isNotBlank(request.getUserId())) {
+            map.put("id", request.getUserId());
         }
         if (StringUtils.isNotBlank(request.getNickName())) {
             map.put("nickName", request.getNickName());

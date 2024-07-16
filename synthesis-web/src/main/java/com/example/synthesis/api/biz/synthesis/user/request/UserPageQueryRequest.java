@@ -8,7 +8,7 @@ import com.example.synthesis.api.model.RequestData;
  */
 public class UserPageQueryRequest extends RequestData {
 
-    private String id;
+    private String userId;
 
     private String nickName;
 
@@ -16,12 +16,12 @@ public class UserPageQueryRequest extends RequestData {
 
     private String pageSize;
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getNickName() {

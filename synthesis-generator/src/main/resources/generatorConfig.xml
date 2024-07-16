@@ -47,8 +47,9 @@
         <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}"
                              type="XMLMAPPER"/>
 
-        <!--tableName一定要写 否则生成mapper时会生成重复的代码-->
-        <table schema="${db.username}" tableName="%">
+        <!--tableName一定要写  否则生成mapper时会生成重复的代码-->
+        <!--每次生成表的时候 不要一次性生成全部 每张表单独设置table标签来生成 避免不必要的重复生成-->
+        <table schema="${db.username}" tableName="sys_user">
             <property name="useActualColumnNames" value="false"/>
         </table>
     </context>
