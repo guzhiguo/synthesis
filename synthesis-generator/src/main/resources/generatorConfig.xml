@@ -27,6 +27,8 @@
                         connectionURL="${db.url}"
                         userId="${db.username}"
                         password="${db.password}">
+            <!--防止驱动版本过高导致生成不必要的表文件-->
+            <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
 
         <!--

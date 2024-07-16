@@ -3,48 +3,48 @@ package com.example.synthesis.pojo;
 import java.util.Date;
 
 public class SysUser {
-    private String id;
+    private Long id;
 
-    private String name;
+    private Integer userId;
+
+    private String userName;
 
     private String nickName;
 
-    private String avatar;
-
     private String password;
-
-    private String salt;
 
     private String email;
 
     private String mobile;
 
-    private Integer status;
+    private String status;
 
-    private Long deptId;
+    private Date gmtCreate;
 
-    private String creator;
+    private Date gmtModify;
 
-    private String lastUpdateBy;
-
-    private Date lastUpdateTime;
-
-    private Integer delFlag;
-
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Integer getUserId() {
+        return userId;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getNickName() {
@@ -55,28 +55,12 @@ public class SysUser {
         this.nickName = nickName;
     }
 
-    public String getAvatar() {
-        return avatar;
-    }
-
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
-    }
-
     public String getPassword() {
         return password;
     }
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    public String getSalt() {
-        return salt;
-    }
-
-    public void setSalt(String salt) {
-        this.salt = salt;
     }
 
     public String getEmail() {
@@ -95,51 +79,27 @@ public class SysUser {
         this.mobile = mobile;
     }
 
-    public Integer getStatus() {
+    public String getStatus() {
         return status;
     }
 
-    public void setStatus(Integer status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
-    public Long getDeptId() {
-        return deptId;
+    public Date getGmtCreate() {
+        return gmtCreate;
     }
 
-    public void setDeptId(Long deptId) {
-        this.deptId = deptId;
+    public void setGmtCreate(Date gmtCreate) {
+        this.gmtCreate = gmtCreate;
     }
 
-    public String getCreator() {
-        return creator;
+    public Date getGmtModify() {
+        return gmtModify;
     }
 
-    public void setCreator(String creator) {
-        this.creator = creator;
-    }
-
-    public String getLastUpdateBy() {
-        return lastUpdateBy;
-    }
-
-    public void setLastUpdateBy(String lastUpdateBy) {
-        this.lastUpdateBy = lastUpdateBy;
-    }
-
-    public Date getLastUpdateTime() {
-        return lastUpdateTime;
-    }
-
-    public void setLastUpdateTime(Date lastUpdateTime) {
-        this.lastUpdateTime = lastUpdateTime;
-    }
-
-    public Integer getDelFlag() {
-        return delFlag;
-    }
-
-    public void setDelFlag(Integer delFlag) {
-        this.delFlag = delFlag;
+    public void setGmtModify(Date gmtModify) {
+        this.gmtModify = gmtModify;
     }
 }
