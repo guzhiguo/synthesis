@@ -46,6 +46,7 @@
                              type="XMLMAPPER"/>
 
         <table tableName="%">
+
             <property name="useActualColumnNames" value="false"/>
         </table>
     </context>

@@ -4,11 +4,11 @@ import com.example.synthesis.pojo.SysUser;
 import java.util.List;
 
 public interface SysUserMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(Long id);
 
     int insert(SysUser record);
 
-    SysUser selectByPrimaryKey(String id);
+    SysUser selectByPrimaryKey(Long id);
 
     List<SysUser> selectAll();
 

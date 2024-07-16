@@ -2,6 +2,38 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.synthesis.dao.SysConfigMapper">
   <resultMap id="BaseResultMap" type="com.example.synthesis.pojo.SysConfig">
+    <id column="variable" jdbcType="VARCHAR" property="variable" />
+    <result column="value" jdbcType="VARCHAR" property="value" />
+    <result column="set_time" jdbcType="TIMESTAMP" property="setTime" />
+    <result column="set_by" jdbcType="VARCHAR" property="setBy" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from sys_config
+    where `variable` = #{variable,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.example.synthesis.pojo.SysConfig">
+    insert into sys_config (`variable`, `value`, set_time, 
+      set_by)
+    values (#{variable,jdbcType=VARCHAR}, #{value,jdbcType=VARCHAR}, #{setTime,jdbcType=TIMESTAMP}, 
+      #{setBy,jdbcType=VARCHAR})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="com.example.synthesis.pojo.SysConfig">
+    update sys_config
+    set `value` = #{value,jdbcType=VARCHAR},
+      set_time = #{setTime,jdbcType=TIMESTAMP},
+      set_by = #{setBy,jdbcType=VARCHAR}
+    where `variable` = #{variable,jdbcType=VARCHAR}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select `variable`, `value`, set_time, set_by
+    from sys_config
+    where `variable` = #{variable,jdbcType=VARCHAR}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select `variable`, `value`, set_time, set_by
+    from sys_config
+  </select>
+  <resultMap id="BaseResultMap" type="com.example.synthesis.pojo.SysConfig">
     <id column="id" jdbcType="VARCHAR" property="id" />
     <result column="value" jdbcType="VARCHAR" property="value" />
     <result column="label" jdbcType="VARCHAR" property="label" />

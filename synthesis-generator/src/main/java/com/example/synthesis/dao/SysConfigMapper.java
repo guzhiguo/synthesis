@@ -4,11 +4,11 @@ import com.example.synthesis.pojo.SysConfig;
 import java.util.List;
 
 public interface SysConfigMapper {
-    int deleteByPrimaryKey(String id);
+    int deleteByPrimaryKey(String variable);
 
     int insert(SysConfig record);
 
-    SysConfig selectByPrimaryKey(String id);
+    SysConfig selectByPrimaryKey(String variable);
 
     List<SysConfig> selectAll();
 

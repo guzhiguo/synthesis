@@ -3,36 +3,20 @@ package com.example.synthesis.pojo;
 import java.util.Date;
 
 public class SysConfig {
-    private String id;
+    private String variable;
 
     private String value;
 
-    private String label;
+    private Date setTime;
 
-    private String type;
+    private String setBy;
 
-    private String describe;
-
-    private Long sort;
-
-    private String creator;
-
-    private Date createTime;
-
-    private String lastUpdateBy;
-
-    private Date lastUpdateTime;
-
-    private String remarks;
-
-    private Integer delFlag;
-
-    public String getId() {
-        return id;
+    public String getVariable() {
+        return variable;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setVariable(String variable) {
+        this.variable = variable;
     }
 
     public String getValue() {
@@ -43,83 +27,19 @@ public class SysConfig {
         this.value = value;
     }
 
-    public String getLabel() {
-        return label;
+    public Date getSetTime() {
+        return setTime;
     }
 
-    public void setLabel(String label) {
-        this.label = label;
+    public void setSetTime(Date setTime) {
+        this.setTime = setTime;
     }
 
-    public String getType() {
-        return type;
+    public String getSetBy() {
+        return setBy;
     }
 
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getDescribe() {
-        return describe;
-    }
-
-    public void setDescribe(String describe) {
-        this.describe = describe;
-    }
-
-    public Long getSort() {
-        return sort;
-    }
-
-    public void setSort(Long sort) {
-        this.sort = sort;
-    }
-
-    public String getCreator() {
-        return creator;
-    }
-
-    public void setCreator(String creator) {
-        this.creator = creator;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public String getLastUpdateBy() {
-        return lastUpdateBy;
-    }
-
-    public void setLastUpdateBy(String lastUpdateBy) {
-        this.lastUpdateBy = lastUpdateBy;
-    }
-
-    public Date getLastUpdateTime() {
-        return lastUpdateTime;
-    }
-
-    public void setLastUpdateTime(Date lastUpdateTime) {
-        this.lastUpdateTime = lastUpdateTime;
-    }
-
-    public String getRemarks() {
-        return remarks;
-    }
-
-    public void setRemarks(String remarks) {
-        this.remarks = remarks;
-    }
-
-    public Integer getDelFlag() {
-        return delFlag;
-    }
-
-    public void setDelFlag(Integer delFlag) {
-        this.delFlag = delFlag;
+    public void setSetBy(String setBy) {
+        this.setBy = setBy;
     }
 }
