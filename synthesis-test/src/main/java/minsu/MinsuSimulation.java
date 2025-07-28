@@ -1,35 +1,37 @@
+package minsu;
+
 import java.util.Random;
 
 public class MinsuSimulation {
 
     public static void main(String[] args) {
         // 常量定义
-        int totalRooms = 8; // 民宿房间总数
-        double basePrice = 200.0; // 基础房价
+        int totalRooms = 32; // 民宿房间总数
+        double basePrice = 50; // 基础房价
         double lowSeasonRate = 0.3; // 淡季入住率
         double highSeasonRate = 0.95; // 旺季入住率
         double lowSeasonPriceFactor = 0.8; // 淡季价格调整系数（降低20%）
-        double highSeasonPriceFactor = 1.8; // 旺季价格调整系数（提高80%）
+        double highSeasonPriceFactor = 1.5; // 旺季价格调整系数（提高80%）
         int lowSeasonDays = 240; // 淡季天数
         int highSeasonDays = 125; // 旺季天数
 
         // 成本及费用定义
-        double transferFee = 180000.0; // 转让费
-        double deposit = 20000.0; // 押金
+        double transferFee = 36000.0; // 转让费
+        double deposit = 0.0; // 押金
         double networkFee = 1000.0; // 网络费用
-        double maintenanceFee = 10000.0; // 年度维修费用
-        double employeeSalary = 4000.0 * 12; // 员工工资（按月 * 12个月）
+        double maintenanceFee = 5000.0; // 年度维修费用
+        double employeeSalary = 3000.0 * 12; // 员工工资（按月 * 12个月）
         double taxRate = 0.01; // 纳税比例（1%）
         double electricityCostPerUnit = 0.56; // 每度电的电费
         double waterCostPerCubicMeter = 5.95; // 每立方米水费
-        double disposableCostPerRoom = 12.0; // 每次入住的一次性用品成本
-        int minElectricityUsagePerRoom = 5; // 每间房每日最低用电量（度）
-        int maxElectricityUsagePerRoom = 8; // 每间房每日最高用电量（度）
+        double disposableCostPerRoom = 0.0; // 每次入住的一次性用品成本
+        int minElectricityUsagePerRoom = 1; // 每间房每日最低用电量（度）
+        int maxElectricityUsagePerRoom = 3; // 每间房每日最高用电量（度）
         int averageWaterUsagePerRoom = 1; // 每间房每日平均用水量（立方米）
 
         // 平台佣金比例
         double douyinCommissionRate = 0.05; // 抖音佣金比例
-        double ctripCommissionRate = 0.15; // 携程佣金比例
+        double ctripCommissionRate = 0.12; // 携程佣金比例
         double meituanCommissionRate = 0.12; // 美团佣金比例
         double otherPlatformCommissionRate = 0.10; // 其他平台佣金比例
 
