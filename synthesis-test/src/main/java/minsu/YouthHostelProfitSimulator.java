@@ -3,6 +3,9 @@ package minsu;
 import java.util.*;
 
 
+/**
+ * 青旅mock
+ */
 public class YouthHostelProfitSimulator {
 
     // 基础参数

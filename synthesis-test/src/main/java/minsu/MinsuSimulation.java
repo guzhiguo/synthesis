@@ -2,6 +2,9 @@ package minsu;
 
 import java.util.Random;
 
+/**
+ * 丽江民宿mock
+ */
 public class MinsuSimulation {
 
     public static void main(String[] args) {
