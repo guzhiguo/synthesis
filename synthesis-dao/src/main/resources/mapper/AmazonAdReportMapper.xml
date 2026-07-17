@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.synthesis.dao.AmazonAdReportMapper">
+
+    <resultMap id="BaseResultMap" type="com.example.synthesis.pojo.AmazonAdReport">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="report_date"          jdbcType="DATE"     property="reportDate"/>
+        <result column="portfolio_name"       jdbcType="VARCHAR"  property="portfolioName"/>
+        <result column="currency"             jdbcType="VARCHAR"  property="currency"/>
+        <result column="campaign_name"        jdbcType="VARCHAR"  property="campaignName"/>
+        <result column="ad_group_name"        jdbcType="VARCHAR"  property="adGroupName"/>
+        <result column="retailer"             jdbcType="VARCHAR"  property="retailer"/>
+        <result column="country"              jdbcType="VARCHAR"  property="country"/>
+        <result column="placement"            jdbcType="VARCHAR"  property="placement"/>
+        <result column="match_type"           jdbcType="VARCHAR"  property="matchType"/>
+        <result column="search_term"          jdbcType="VARCHAR"  property="searchTerm"/>
+        <result column="impressions"          jdbcType="INTEGER"  property="impressions"/>
+        <result column="clicks"               jdbcType="INTEGER"  property="clicks"/>
+        <result column="ctr"                  jdbcType="VARCHAR"  property="ctr"/>
+        <result column="cpc"                  jdbcType="DOUBLE"   property="cpc"/>
+        <result column="spend"                jdbcType="DOUBLE"   property="spend"/>
+        <result column="sales_7d"             jdbcType="DOUBLE"   property="sales7d"/>
+        <result column="acos"                 jdbcType="VARCHAR"  property="acos"/>
+        <result column="roas"                 jdbcType="VARCHAR"  property="roas"/>
+        <result column="orders_7d"            jdbcType="INTEGER"  property="orders7d"/>
+        <result column="units_7d"             jdbcType="INTEGER"  property="units7d"/>
+        <result column="conversion_rate_7d"   jdbcType="VARCHAR"  property="conversionRate7d"/>
+        <result column="ad_sku_units_7d"      jdbcType="INTEGER"  property="adSkuUnits7d"/>
+        <result column="other_sku_units_7d"   jdbcType="INTEGER"  property="otherSkuUnits7d"/>
+        <result column="ad_sku_sales_7d"      jdbcType="DOUBLE"   property="adSkuSales7d"/>
+        <result column="other_sku_sales_7d"   jdbcType="DOUBLE"   property="otherSkuSales7d"/>
+        <result column="gmt_create"           jdbcType="TIMESTAMP" property="gmtCreate"/>
+        <result column="gmt_modify"           jdbcType="TIMESTAMP" property="gmtModify"/>
+    </resultMap>
+
+    <!-- 批量插入（覆盖模式：先删后插） -->
+    <insert id="batchInsert" parameterType="java.util.List">
+        INSERT INTO amazon_ad_report (
+            report_date, portfolio_name, currency, campaign_name, ad_group_name,
+            retailer, country, placement, match_type, search_term,
+            impressions, clicks, ctr, cpc, spend,
+            sales_7d, acos, roas, orders_7d, units_7d,
+            conversion_rate_7d, ad_sku_units_7d, other_sku_units_7d,
+            ad_sku_sales_7d, other_sku_sales_7d
+        ) VALUES
+        <foreach collection="list" item="item" separator=",">
+        (
+            #{item.reportDate,jdbcType=DATE},
+            #{item.portfolioName,jdbcType=VARCHAR},
+            #{item.currency,jdbcType=VARCHAR},
+            #{item.campaignName,jdbcType=VARCHAR},
+            #{item.adGroupName,jdbcType=VARCHAR},
+            #{item.retailer,jdbcType=VARCHAR},
+            #{item.country,jdbcType=VARCHAR},
+            #{item.placement,jdbcType=VARCHAR},
+            #{item.matchType,jdbcType=VARCHAR},
+            #{item.searchTerm,jdbcType=VARCHAR},
+            #{item.impressions,jdbcType=INTEGER},
+            #{item.clicks,jdbcType=INTEGER},
+            #{item.ctr,jdbcType=VARCHAR},
+            #{item.cpc,jdbcType=DOUBLE},
+            #{item.spend,jdbcType=DOUBLE},
+            #{item.sales7d,jdbcType=DOUBLE},
+            #{item.acos,jdbcType=VARCHAR},
+            #{item.roas,jdbcType=VARCHAR},
+            #{item.orders7d,jdbcType=INTEGER},
+            #{item.units7d,jdbcType=INTEGER},
+            #{item.conversionRate7d,jdbcType=VARCHAR},
+            #{item.adSkuUnits7d,jdbcType=INTEGER},
+            #{item.otherSkuUnits7d,jdbcType=INTEGER},
+            #{item.adSkuSales7d,jdbcType=DOUBLE},
+            #{item.otherSkuSales7d,jdbcType=DOUBLE}
+        )
+        </foreach>
+    </insert>
+
+    <!-- 清空表 -->
+    <delete id="deleteAll">
+        DELETE FROM amazon_ad_report
+    </delete>
+
+</mapper>

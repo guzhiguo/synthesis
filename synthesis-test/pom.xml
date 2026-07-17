@@ -8,6 +8,13 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <dependencies>
+        <!-- 依赖 dao 模块（使用 POJO） -->
+        <dependency>
+            <groupId>com.example</groupId>
+            <artifactId>synthesis-dao</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
         <!--Quartz任务调度包-->
         <dependency>
             <groupId>org.springframework</groupId>
